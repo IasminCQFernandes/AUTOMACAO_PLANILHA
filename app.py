@@ -259,7 +259,7 @@ plan1_df = None
 if uploaded_file_data:
     try:
         # Força a coluna 'CONVENIO' a ser lida como string
-        dtype_map = {'CONVENIO': str} 
+        dtype_map = {'CONVENIO': str, 'FORMA_PGTO': str} 
         plan1_df = pd.read_excel(uploaded_file_data, sheet_name="Plan1", dtype=dtype_map)
         st.success("✔️ Planilha de Dados ('Plan1') lida com sucesso. Iniciando mapeamento...")
 
